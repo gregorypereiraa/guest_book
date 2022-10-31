@@ -62,13 +62,13 @@ public class GuestLogic
     {
         var sb = new StringBuilder();
         Console.WriteLine(WelcomeMessage());
-        var data = GetAllData();
+        var (names, number) = GetAllData();
         Console.Clear();
         sb.Append("\n");
-        sb.Append("At this party, there are exactly " + data.Item2 + " people having a wonderful night\r");
+        sb.Append("At this party, there are exactly " + number + " people having a wonderful night\r");
         sb.Append('\n');
         sb.Append("The groups of people having a Great night are \r\n");
-        foreach (var output in data.Item1)
+        foreach (var output in names)
 
         {
             sb.Append(output + "'s group\r");
